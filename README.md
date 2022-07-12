@@ -80,3 +80,22 @@ query helloQuery {
 }
 ```
 
+**GET** /url-of-the-deployed-lambda/graphql
+
+```javascript
+query BooksQuery {
+  getAllBooks {
+    id
+    name
+  }
+}
+```
+
+**POST** /url-of-the-deployed-lambda/graphql
+
+```javascript
+mutation count {
+  getCount(count: 20)
+}
+```
+
