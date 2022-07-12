@@ -15,7 +15,7 @@
 
   "functions": {
     "graphqlQuery": {
-      "handler": "src/apolloServerLambda.handler",
+      "handler": "src/graphqlService.graphqlHandler",
       "events": [{ "httpApi": "GET /graphql" }]
     }
   }

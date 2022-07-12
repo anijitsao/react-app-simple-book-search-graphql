@@ -7,5 +7,5 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const handler = server.createHandler();
-export { handler };
+const graphqlHandler = server.createHandler();
+export { graphqlHandler };
