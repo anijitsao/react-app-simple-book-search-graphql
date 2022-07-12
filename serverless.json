@@ -16,7 +16,7 @@
   "functions": {
     "graphqlQuery": {
       "handler": "src/graphqlService.graphqlHandler",
-      "events": [{ "httpApi": "GET /graphql" }]
+      "events": [{ "httpApi": "ANY /graphql" }]
     }
   }
 }
