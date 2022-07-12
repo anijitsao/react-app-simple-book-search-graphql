@@ -64,11 +64,19 @@ $ serverless deploy
 
 ### Invocation
 
-After successful deployment, you can invoke the deployed function. 
-All the `cron` events will invoke the deployed functions in stipulated time interval. 
+After successful deployment, you can invoke the deployed functions / resolvers. 
 
-However, to call using `httpApi` you can use any REST Client like [Talend API Tester](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
+However, to call using `httpApi/ GraphQL API` you can use any GraphQl Client like [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
 
 ## API Listing
 
-It should call necessary GraphQL APIs.
+It should call necessary GraphQL APIs. Some of the API listing is given below
+
+**GET** /url-of-the-deployed-lambda/graphql
+
+```javascript
+query helloQuery {
+  hello
+}
+```
+
