@@ -75,7 +75,7 @@ It should call necessary GraphQL APIs. Some of the API listing is given below
 **GET** /url-of-the-deployed-lambda/graphql
 
 ```javascript
-query helloQuery {
+query HelloQuery {
   hello
 }
 ```
@@ -94,7 +94,7 @@ query BooksQuery {
 **POST** /url-of-the-deployed-lambda/graphql
 
 ```javascript
-mutation count {
+mutation ModifyCount {
   getCount(count: 20)
 }
 ```
