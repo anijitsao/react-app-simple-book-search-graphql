@@ -64,7 +64,7 @@ $ serverless deploy
 
 ### Invocation
 
-After successful deployment, you can invoke the deployed functions / resolvers. 
+After successful deployment, you can invoke the deployed **functions / resolvers**. 
 
 However, to call using `httpApi/ GraphQL API` you can use any GraphQl Client like [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
 
@@ -80,7 +80,7 @@ query HelloQuery {
 }
 ```
 
-**GET** /url-of-the-deployed-lambda/graphql
+**GET** ```/url-of-the-deployed-lambda/graphql
 
 ```javascript
 query BooksQuery {
