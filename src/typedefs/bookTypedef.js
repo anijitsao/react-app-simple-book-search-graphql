@@ -3,12 +3,12 @@ import { gql } from "apollo-server-lambda";
 const booksTypeDefs = gql`
   # type book is defined
   type Book {
-    id: ID!
+    _id: ID!
     name: String!
+    published: Int
   }
 
   type Query {
-    getAllBooks: [Book!]!
     findBooks: [Book]
   }
 `;
