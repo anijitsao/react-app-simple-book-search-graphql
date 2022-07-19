@@ -1,5 +1,3 @@
-import { gql } from "apollo-server-lambda";
-
 const booksTypeDefs = `
   # type book is defined
   type Book {

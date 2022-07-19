@@ -1,5 +1,3 @@
-import { gql } from "apollo-server-lambda";
-
 const helloTypeDefs = `
   type Query {
     hello: String!
