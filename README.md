@@ -7,13 +7,16 @@ To work with [GraphQL](https://graphql.org/) features, i.e. **Type Definitions, 
 
 This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) events. 
 
-[//]: # (For faster response with the APIs [Redis](https://redis.io/) *caching* is used). For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
+<!---
+For faster response with the APIs [Redis](https://redis.io/) *caching* is used.
+For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
+-->
 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*.
 
 To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user. You **must** have a [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) account as well as an [AWS EC2](https://aws.amazon.com/ec2/) instance should be installed with [Redis](https://redis.io/).
 
-[User Sticker App](https://github.com/anijitsahu/react-app-simple-user-sticker-app) is related to this application.
+
 
 ## Features
 1. [AWS Lambda](https://aws.amazon.com/lambda/) function using [NodeJS](https://nodejs.org/en/docs/)
@@ -32,14 +35,20 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 </ol>  
 
 
+<!---
 6. For **session tracking** [JWT](https://jwt.io/) is used.
-7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
+-->
+6. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
 
-<ol start="8">
+<ol start="7">
   <li> All data is saved in <a href="https://www.mongodb.com/docs/atlas/">MongoDB Atlas</a> i.e. <i>persistent</i>
-  <li> <strong>Caching</strong> is used for faster response in the APIs. <a href="https://redis.io/">Redis</a> is used for that purpose</li> 
+  <!--- <li> <strong>Caching</strong> is used for faster response in the APIs. <a href="https://redis.io/">Redis</a> is used for that purpose</li> -->
   <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
+  <li> To use <a href="https://graphql.org/">GraphQL</a> features <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used
+  <li> For the <i>Schema</i> generation <b>Type Definitions</b> are added. <b>Queries</b> are used for the <i>Reading</i> operations while <b>Mutations</b> are added for <i>Mutable</i> operations.
 </ol>  
+
+
 
 11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
 12. **Custom Headers** are added with the response for *obvious security* reasons.
@@ -71,13 +80,15 @@ $ serverless deploy
 
 After successful deployment, you can invoke the deployed **functions / resolvers**. 
 
-However, to call using `httpApi/ GraphQL API` you can use any GraphQl Client like [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
+However, to call using [GraphQL](https://graphql.org/) API you can use any *supported* Client like [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
 
 ## API Listing
 
-It should call necessary GraphQL APIs. Some of the API listing is given below
+API listing is given below, -
 
 **GET** /url-of-the-deployed-lambda/graphql
+
+Following *Queries* use the same URL mentioned above
 
 ```javascript
 query HelloQuery {
@@ -85,7 +96,7 @@ query HelloQuery {
 }
 ```
 
-**GET** /url-of-the-deployed-lambda/graphql
+
 
 ```javascript
 query FindBooksQuery {
