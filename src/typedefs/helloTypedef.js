@@ -1,4 +1,6 @@
-const helloTypeDefs = `
+import { gql } from "apollo-server-lambda";
+
+const helloTypeDefs = gql`
   type Query {
     hello: String!
   }
