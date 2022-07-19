@@ -113,7 +113,7 @@ mutation AddBookMutation {
 
 ```javascript
 mutation DeleteBookMutation {
-  deleteBook(_id: "62d695824e2ac4c36050f34d")
+  deleteBook(_id: "id-of-the-book-to-delete")
 }
 ```
 
@@ -124,7 +124,7 @@ mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
 
 // variables
 {
-  "updateId": "62d6966476c0281419c22c5f",
+  "updateId": "id-of-the-book-to-update",
   "bookData": { 
    "name": "You Don't Know ES6"
   }
