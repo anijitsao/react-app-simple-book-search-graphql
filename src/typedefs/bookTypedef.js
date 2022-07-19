@@ -15,6 +15,7 @@ const booksTypeDefs = gql`
   # All the Mutations on Book listed here
   type Mutation {
     addBook(name: String!): Book!
+    deleteBook(_id: ID!): Int!
   }
 `;
 

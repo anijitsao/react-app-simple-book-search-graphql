@@ -1,5 +1,9 @@
 // local dependencies
-import { findBooksFromDB, addBookToDB } from "../dbRelated/booksDbOps.js";
+import {
+  findBooksFromDB,
+  addBookToDB,
+  deleteBookFromDB,
+} from "../dbRelated/booksDbOps.js";
 
 const resolvers = {
   Query: {
@@ -12,7 +16,9 @@ const resolvers = {
     addBook: (_, args) => {
       return addBookToDB(args);
     },
+    deleteBook: (_, args) => {
+      return deleteBookFromDB(args);
+    },
   },
 };
-// console.log("fromm console", resolvers.Query.getAllBooks());
 export { resolvers };

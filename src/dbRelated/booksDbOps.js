@@ -41,4 +41,21 @@ const addBookToDB = async (bookToAdd) => {
   }
 };
 
-export { findBooksFromDB, addBookToDB };
+const deleteBookFromDB = async (bookToDelete) => {
+  // create the connection
+  const client = createConnectionToDB();
+  try {
+    // select the DB and collection
+    const db = selectDB(client, DB_NAME);
+    const bookDeleted = await db
+      .collection(COLLECTION_BOOKS)
+      .deleteOne({ _id: convertToObjectId(bookToDelete._id) });
+    return bookDeleted.deletedCount;
+  } catch (error) {
+    return error.toString();
+  } finally {
+    await closeConnectionToDB(client);
+  }
+};
+
+export { findBooksFromDB, addBookToDB, deleteBookFromDB };
