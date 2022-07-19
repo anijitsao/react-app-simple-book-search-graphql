@@ -1,13 +1,13 @@
 // local dependencies
-import { dbClient, ObjectId } from "../libs/mongoClient.js";
+import { MongoClient, ObjectId } from "../libs/mongoClient.js";
 
-const createConnectionToDB = async () => {
-  const client = await dbClient.connect();
+const createConnectionToDB = () => {
+  const client = new MongoClient(process.env.URI_TO_CONNECT_MONGODB);
   return client;
 };
 
-const closeConnectionToDB = (client) => {
-  client.close();
+const closeConnectionToDB = async (client) => {
+  await client.close();
 };
 
 const selectDB = (client, DB_NAME) => {

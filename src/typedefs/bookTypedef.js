@@ -11,6 +11,11 @@ const booksTypeDefs = gql`
   type Query {
     findBooks: [Book]
   }
+
+  # All the Mutations on Book listed here
+  type Mutation {
+    addBook(name: String!): ID
+  }
 `;
 
 export { booksTypeDefs };

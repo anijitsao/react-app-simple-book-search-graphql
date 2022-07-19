@@ -1,5 +1,5 @@
 // local dependencies
-import { findBooksFromDB } from "../dbRelated/booksDbOps.js";
+import { findBooksFromDB, addBookToDB } from "../dbRelated/booksDbOps.js";
 
 const resolvers = {
   Query: {
@@ -9,9 +9,8 @@ const resolvers = {
   },
 
   Mutation: {
-    getCount: (parent, arg) => {
-      // console.log("arg is", arg);
-      return arg.count + 1;
+    addBook: (_, args) => {
+      return addBookToDB(args);
     },
   },
 };
