@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-lambda";
 
-const booksTypeDefs = gql`
+const booksTypeDefs = `
   # type book is defined
   type Book {
     id: String
@@ -8,12 +8,7 @@ const booksTypeDefs = gql`
   }
 
   type Query {
-    hello: String
     getAllBooks: [Book!]!
-  }
-
-  type Mutation {
-    getCount(count: Int): Int
   }
 `;
 
