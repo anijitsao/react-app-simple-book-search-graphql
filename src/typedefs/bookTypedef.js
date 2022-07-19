@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-lambda";
 
-const typeDefs = gql`
+const booksTypeDefs = gql`
   # type book is defined
   type Book {
     id: String
@@ -17,4 +17,4 @@ const typeDefs = gql`
   }
 `;
 
-export { typeDefs };
+export { booksTypeDefs };
