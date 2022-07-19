@@ -12,10 +12,16 @@ const booksTypeDefs = gql`
     findBooks: [Book]
   }
 
+  input UpdataBookParams {
+    name: String!
+    published: Int
+  }
+
   # All the Mutations on Book listed here
   type Mutation {
     addBook(name: String!): Book!
     deleteBook(_id: ID!): Int!
+    updateBook(_id: ID!, updateBookData: UpdataBookParams!): Int!
   }
 `;
 

@@ -58,4 +58,25 @@ const deleteBookFromDB = async (bookToDelete) => {
   }
 };
 
-export { findBooksFromDB, addBookToDB, deleteBookFromDB };
+const updateBookToDB = async (bookToUpdate) => {
+  console.log("Book to update", bookToUpdate);
+  // create the connection
+  const client = createConnectionToDB();
+  try {
+    // select the DB and collection
+    const db = selectDB(client, DB_NAME);
+    const bookDeleted = await db
+      .collection(COLLECTION_BOOKS)
+      .updateOne(
+        { _id: convertToObjectId(bookToUpdate._id) },
+        { $set: { ...bookToUpdate.updateBookData } }
+      );
+    return bookDeleted.modifiedCount;
+  } catch (error) {
+    return error.toString();
+  } finally {
+    await closeConnectionToDB(client);
+  }
+};
+
+export { findBooksFromDB, addBookToDB, deleteBookFromDB, updateBookToDB };

@@ -3,6 +3,7 @@ import {
   findBooksFromDB,
   addBookToDB,
   deleteBookFromDB,
+  updateBookToDB,
 } from "../dbRelated/booksDbOps.js";
 
 const resolvers = {
@@ -18,6 +19,9 @@ const resolvers = {
     },
     deleteBook: (_, args) => {
       return deleteBookFromDB(args);
+    },
+    updateBook: (_, args) => {
+      return updateBookToDB(args);
     },
   },
 };
