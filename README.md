@@ -96,14 +96,22 @@ query HelloQuery {
 }
 ```
 
-
-
 ```javascript
 query FindBooksQuery {
   findBooks {
     _id
     name
     published
+  }
+}
+```
+
+```javascript
+query FindAllAuthors{
+  findAuthors {
+    _id
+    firstName
+    lastName
   }
 }
 ```
@@ -146,4 +154,36 @@ mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
   }
 }
 ```
+```javascript
+mutation AddAuthorMutation {
+  addAuthor(firstName: "Agatha", lastName: "Christie"){
+    _id
+    firstName
+  }
+}
+```
 
+```javascript
+mutation DeleteAuthorMutation {
+  deleteAuthor(_id: "62d6afb823b01d6d1ff85988")
+}
+```
+
+```javascript
+mutation UpdateAuthorMutation(
+  $updateId: ID!
+  $authorData: UpdataAuthorParams!
+) {
+  updateAuthor(_id: $updateId, updateAuthorData: $authorData)
+}
+
+// variables
+{
+  "updateId": "62d6afd523b01d6d1ff85989",
+  "authorData": { 
+   "firstName": "Agatha",
+   "lastName": "Christie",
+   "country": "United Kingdom"
+  }
+}
+```
