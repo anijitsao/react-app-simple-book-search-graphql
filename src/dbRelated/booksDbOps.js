@@ -26,17 +26,18 @@ const findBooksFromDB = async () => {
 
 const addBookToDB = async (bookToAdd) => {
   // create the connection
-  const client = await createConnectionToDB();
+  const client = createConnectionToDB();
   try {
     // select the DB and collection
     const db = selectDB(client, DB_NAME);
-    const booksFound = await db.collection(COLLECTION_BOOKS).find({}).toArray();
-    const res = booksFound.length > 0 ? booksFound : [];
-    return res;
+    const bookInserted = await db
+      .collection(COLLECTION_BOOKS)
+      .insertOne(bookToAdd);
+    return { _id: bookInserted.insertedId, ...bookToAdd };
   } catch (error) {
     return error.toString();
   } finally {
-    closeConnectionToDB(client);
+    await closeConnectionToDB(client);
   }
 };
 
