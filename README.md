@@ -51,7 +51,7 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 
 
 11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
-12. **Custom Headers** are added with the response for *obvious security* reasons.
+
 
 ## Usage
 
