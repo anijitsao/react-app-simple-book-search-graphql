@@ -80,22 +80,54 @@ query HelloQuery {
 }
 ```
 
-**GET** ```/url-of-the-deployed-lambda/graphql
+**GET** /url-of-the-deployed-lambda/graphql
 
 ```javascript
-query BooksQuery {
-  getAllBooks {
-    id
+query FindBooksQuery {
+  findBooks {
+    _id
     name
+    published
   }
 }
 ```
 
 **POST** /url-of-the-deployed-lambda/graphql
 
+Following *Mutations* have the same URL mentioned above
+
 ```javascript
 mutation ModifyCount {
   getCount(count: 20)
+}
+```
+
+```javascript
+mutation AddBookMutation {
+  addBook(name: "You Don't Know JS") {
+    _id
+    name
+  }
+}
+```
+
+```javascript
+mutation DeleteBookMutation {
+  deleteBook(_id: "62d695824e2ac4c36050f34d")
+}
+```
+
+```javascript
+mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
+  updateBook(_id: $updateId, updateBookData: $bookData)
+}
+
+// variables
+{
+  "updateId": "62d6966476c0281419c22c5f",
+  "bookData": { 
+   "name": "You Don't Know ES6"
+  }
 }
 ```
 
