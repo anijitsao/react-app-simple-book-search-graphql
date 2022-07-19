@@ -1,8 +1,13 @@
 # simple-apollo-server-graphql-lambda
-Simple Apollo Server with Node JS and AWS Lambda. 
-This example demonstrates how to deploy a [NodeJS](https://nodejs.org/en/docs/) function running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed functions work with [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
+Simple [GraphQL](https://graphql.org/) APIs implementation using [Node JS](https://nodejs.org/en/docs/) and [AWS Lambda](https://aws.amazon.com/lambda/) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB Atlas](https://www.mongodb.com/docs/atlas/). 
 
-This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) events. For faster response with the APIs [Redis](https://redis.io/) *caching* is used. For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
+This example illustrates how to deploy [GraphQL](https://graphql.org/) APIs using [NodeJS](https://nodejs.org/en/docs/) functions running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed functions work with [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
+
+To work with [GraphQL](https://graphql.org/) features, i.e. **Type Definitions, Mutations, Queries, Resolvers** [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used.
+
+This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) events. 
+
+[//]: # (For faster response with the APIs [Redis](https://redis.io/) *caching* is used). For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*.
 
