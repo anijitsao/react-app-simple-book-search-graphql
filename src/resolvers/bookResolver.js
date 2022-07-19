@@ -5,10 +5,16 @@ const allBooks = require("../data/books.json");
 
 // console.log("allBooks", allBooks, " uri", import.meta.url);
 
+import { findBooksFromDB } from "../dbRelated/booksDbOps.js";
+
 const resolvers = {
   Query: {
     getAllBooks: () => {
       return allBooks;
+    },
+
+    findBooks: () => {
+      return findBooksFromDB();
     },
   },
 

@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-lambda": "^3.10.0",
-    "graphql": "^16.5.0"
+    "graphql": "^16.5.0",
+    "mongodb": "^4.8.0"
   },
   "devDependencies": {
     "serverless-dotenv-plugin": "^4.0.1"
