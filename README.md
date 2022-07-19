@@ -155,9 +155,9 @@ mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
 }
 ```
 
-*POST** /url-of-the-deployed-lambda/graphql
+**POST** /url-of-the-deployed-lambda/graphql
 
-Following *Mutations* have the same URL mentioned above
+Following **Author** related *Mutations* have the same URL mentioned above
 
 ```javascript
 mutation AddAuthorMutation {
