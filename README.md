@@ -154,6 +154,11 @@ mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
   }
 }
 ```
+
+*POST** /url-of-the-deployed-lambda/graphql
+
+Following *Mutations* have the same URL mentioned above
+
 ```javascript
 mutation AddAuthorMutation {
   addAuthor(firstName: "Agatha", lastName: "Christie"){
@@ -165,7 +170,7 @@ mutation AddAuthorMutation {
 
 ```javascript
 mutation DeleteAuthorMutation {
-  deleteAuthor(_id: "62d6afb823b01d6d1ff85988")
+  deleteAuthor(_id: "id-of-the-author-to-delete")
 }
 ```
 
@@ -179,7 +184,7 @@ mutation UpdateAuthorMutation(
 
 // variables
 {
-  "updateId": "62d6afd523b01d6d1ff85989",
+  "updateId": "id-of-the-author-to-update",
   "authorData": { 
    "firstName": "Agatha",
    "lastName": "Christie",
