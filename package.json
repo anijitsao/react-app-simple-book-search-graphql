@@ -13,6 +13,7 @@
   "dependencies": {
     "apollo-server-lambda": "^3.10.0",
     "graphql": "^16.5.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.8.0"
   },
   "devDependencies": {
