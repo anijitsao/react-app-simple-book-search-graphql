@@ -13,7 +13,7 @@ For faster response with the APIs [Redis](https://redis.io/) *caching* is used.
 For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used. 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*.
 
-To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user. You **must** have a [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) account as well as an [AWS EC2](https://aws.amazon.com/ec2/) instance should be installed with [Redis](https://redis.io/).
+To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user. You **must** have a [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) account.
 
 
 
