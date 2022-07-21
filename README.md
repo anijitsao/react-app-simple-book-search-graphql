@@ -9,8 +9,8 @@ This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/la
 
 <!---
 For faster response with the APIs [Redis](https://redis.io/) *caching* is used.
-For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
 -->
+For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used.
 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*.
 
@@ -35,12 +35,10 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 </ol>  
 
 
-<!---
 6. For **session tracking** [JWT](https://jwt.io/) is used.
--->
-6. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
+7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
 
-<ol start="7">
+<ol start="8">
   <li> All data is saved in <a href="https://www.mongodb.com/docs/atlas/">MongoDB Atlas</a> i.e. <i>persistent</i>
   <!--- <li> <strong>Caching</strong> is used for faster response in the APIs. <a href="https://redis.io/">Redis</a> is used for that purpose</li> -->
   <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
@@ -50,7 +48,7 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 
 
 
-11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
+12. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
 
 
 ## Usage
