@@ -192,3 +192,14 @@ mutation UpdateAuthorMutation(
   }
 }
 ```
+
+**POST** /url-of-the-deployed-lambda/graphql
+
+```javascript
+query CreateTokenQuery{
+  // these are the only possible username and password
+  createToken(username: "admin", password: "admin123") { 
+    token
+  }
+}
+```
