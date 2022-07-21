@@ -1,10 +1,16 @@
+import { verifyJWTToken } from "../helpers/jwtHelpers.js";
+
 const resolvers = {
   Query: {
-    hello: () => "Hello World from Hello Resolvers",
+    hello: (_, args, { event }) => {
+      verifyJWTToken(event);
+      return "Hello World from Hello Resolvers";
+    },
   },
   Mutation: {
-    getCount: (parent, arg) => {
-      return arg.count + 1;
+    getCount: (_, args, { event }) => {
+      verifyJWTToken(event);
+      return args.count + 1;
     },
   },
 };

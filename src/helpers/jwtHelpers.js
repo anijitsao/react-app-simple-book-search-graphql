@@ -18,17 +18,16 @@ const createJWTToken = (payload) => {
 };
 
 const verifyJWTToken = (event) => {
-  const token = extractToken(event);
+  const token = extractJWTToken(event);
   try {
     const decoded = verify(token, process.env.JWT_SECRET);
 
-    // if the token has the correct data it is passed
-    if (decoded.appName === process.env.APP_NAME) {
-      return true;
+    // if the token is tampered
+    if (decoded.appName !== process.env.APP_NAME) {
+      throw Error("Invalid Token");
     }
-    return false;
   } catch (error) {
-    return false;
+    throw Error("Invalid Token");
   }
 };
 

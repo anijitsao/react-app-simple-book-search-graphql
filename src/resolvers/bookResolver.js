@@ -5,22 +5,27 @@ import {
   deleteBookFromDB,
   updateBookToDB,
 } from "../dbRelated/booksDbOps.js";
+import { verifyJWTToken } from "../helpers/jwtHelpers.js";
 
 const resolvers = {
   Query: {
-    findBooks: () => {
+    findBooks: (_, args, { event }) => {
+      verifyJWTToken(event);
       return findBooksFromDB();
     },
   },
 
   Mutation: {
-    addBook: (_, args) => {
+    addBook: (_, args, { event }) => {
+      verifyJWTToken(event);
       return addBookToDB(args);
     },
-    deleteBook: (_, args) => {
+    deleteBook: (_, args, { event }) => {
+      verifyJWTToken(event);
       return deleteBookFromDB(args);
     },
-    updateBook: (_, args) => {
+    updateBook: (_, args, { event }) => {
+      verifyJWTToken(event);
       return updateBookToDB(args);
     },
   },

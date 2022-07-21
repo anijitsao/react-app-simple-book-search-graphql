@@ -7,6 +7,9 @@ const server = new ApolloServer({
   resolvers,
   csrfPrevention: true,
   cache: "bounded",
+  context: ({ event }) => {
+    return { event };
+  },
 });
 
 const graphqlHandler = server.createHandler();
