@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 const { sign, verify } = jwt;
 
 // create token from the payload
-const createToken = (payload) => {
+const createJWTToken = (payload) => {
   const token = sign(
     { ...payload, appName: process.env.APP_NAME },
     process.env.JWT_SECRET,
@@ -17,7 +17,7 @@ const createToken = (payload) => {
   return token;
 };
 
-const verifyToken = (event) => {
+const verifyJWTToken = (event) => {
   const token = extractToken(event);
   try {
     const decoded = verify(token, process.env.JWT_SECRET);
@@ -32,7 +32,7 @@ const verifyToken = (event) => {
   }
 };
 
-const extractToken = (event) => {
+const extractJWTToken = (event) => {
   const { headers } = event;
   const tokenExtracted = headers.authorization
     ? headers.authorization.replace("Bearer ", "")
@@ -41,4 +41,4 @@ const extractToken = (event) => {
   return tokenExtracted;
 };
 
-export { createToken, verifyToken };
+export { createJWTToken, verifyJWTToken };
