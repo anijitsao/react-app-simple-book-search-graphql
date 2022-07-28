@@ -83,6 +83,23 @@ However, to call using [GraphQL](https://graphql.org/) API you can use any *supp
 
 API listing is given below, -
 
+**POST** /url-of-the-deployed-lambda/graphql
+
+Following username and password is valid
+
+|Username | Password |
+|---|---|
+|admin | admin123 |
+
+```javascript
+query CreateTokenQuery{
+  // these are the only possible username and password
+  createToken(username: "admin", password: "admin123") { 
+    token
+  }
+}
+```
+
 **GET** /url-of-the-deployed-lambda/graphql
 
 Following *Queries* use the same URL mentioned above
@@ -186,23 +203,6 @@ mutation UpdateAuthorMutation(
    "firstName": "Agatha",
    "lastName": "Christie",
    "country": "United Kingdom"
-  }
-}
-```
-
-**POST** /url-of-the-deployed-lambda/graphql
-
-Following username and password is valid
-
-|Username | Password |
-|---|---|
-|admin | admin123 |
-
-```javascript
-query CreateTokenQuery{
-  // these are the only possible username and password
-  createToken(username: "admin", password: "admin123") { 
-    token
   }
 }
 ```
