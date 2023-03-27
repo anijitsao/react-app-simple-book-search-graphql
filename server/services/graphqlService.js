@@ -8,13 +8,14 @@ const server = new ApolloServer({
   resolvers,
   csrfPrevention: true,
   cache: "bounded",
-  context: ({ event }) => {
-    return { event };
-  },
 });
 
 const { url } = await startStandaloneServer(server, {
   listen: { port: 4000 },
+  context: async ({ req }) => {
+    // send the http req as event to match JWT methods
+    return { event: req };
+  },
 });
 
 console.log(`Server ready at: ${url}`);
