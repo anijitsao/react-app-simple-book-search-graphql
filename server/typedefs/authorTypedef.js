@@ -1,6 +1,4 @@
-import { gql } from "apollo-server-lambda";
-
-const authorsTypeDefs = gql`
+const authorsTypeDefs = `#graphql
   # type book is defined
   type Author {
     _id: ID!

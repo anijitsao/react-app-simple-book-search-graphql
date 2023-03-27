@@ -1,4 +1,5 @@
-import { ApolloServer, gql } from "apollo-server-lambda";
+import { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
 import { resolvers } from "../resolvers/index.js";
 import { typeDefs } from "../typedefs/index.js";
 
@@ -12,5 +13,8 @@ const server = new ApolloServer({
   },
 });
 
-const graphqlHandler = server.createHandler();
-export { graphqlHandler };
+const { url } = await startStandaloneServer(server, {
+  listen: { port: 4000 },
+});
+
+console.log(`Server ready at: ${url}`);

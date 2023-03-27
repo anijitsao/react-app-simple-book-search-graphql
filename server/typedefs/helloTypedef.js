@@ -1,6 +1,4 @@
-import { gql } from "apollo-server-lambda";
-
-const helloTypeDefs = gql`
+const helloTypeDefs = `#graphql
   type Query {
     hello: String!
   }

@@ -1,6 +1,4 @@
-import { gql } from "apollo-server-lambda";
-
-const authTypeDefs = gql`
+const authTypeDefs = `#graphql
   # type definitions for authorization services
   type Token {
     token: String!
