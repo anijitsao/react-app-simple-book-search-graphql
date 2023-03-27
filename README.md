@@ -52,13 +52,13 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 First clone the repo
 
 ```bash
-$ git clone https://github.com/anijitsao/simple-apollo-server-graphql-lambda.git
+$ git clone https://github.com/anijitsao/simple-apollo-server-graphql.git
 ```
 Install all the necessary dependencies by going inside the directory
 
 ```bash
 # Navigating inside the directory
-$ cd simple-apollo-server-graphql-lambda
+$ cd simple-apollo-server-graphql
 
 # To install all the necessary dependencies
 $ npm install
