@@ -1,36 +1,34 @@
 # react-app-simple-book-search-graphql
 
-A Simple Book Search Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). To connect with the Backend [GraphQL](https://graphql.org/) is used with the framework [Apollo Client](https://www.apollographql.com/docs/react/) where the [Apollo Server](https://www.apollographql.com/docs/react/)
+A Simple Book Search Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). To connect with the Backend [GraphQL](https://graphql.org/) is used with the framework [Apollo Client](https://www.apollographql.com/docs/react/) where the [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used to implement GraphQL Server.
 
 This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/).
 
-ES6 `module` creation along with `import /export` is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code. To install all the dependecies `npm` is used.
+ES6 `module` along with [JSX Components](https://reactjs.org/docs/jsx-in-depth.html) is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code.
 
-Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). [Atlas](https://www.mongodb.com/cloud/atlas), the _Cloud_ version of [MongoDB](https://docs.mongodb.com/) is used.
+Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB](https://docs.mongodb.com/). [Atlas](https://www.mongodb.com/cloud/atlas), the _Cloud_ version of [MongoDB](https://docs.mongodb.com/) is used.
 
-For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used. [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout), the new feature of [CSS3](https://www.w3schools.com/css/) is used for layout creation purpose.
+For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used.
 
 This is a _responsive web application_ for viewing in both Mobile and Desktop.
 
-**This Application is closely related to [simple-apollo-server-graphql-lambda](https://github.com/anijitsahu/simple-apollo-server-graphql-lambda). For Backend Deployment details please check [simple-apollo-server-graphql-lambda](https://github.com/anijitsahu/simple-apollo-server-graphql-lambda).**
+**This Application uses standalone GraphQL Server. For Backend Deployment with AWS Lambda details please check [aws-lambda branch](https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda).**
 
 ## Features
 
-1. Code is rewritten with [React JS 18](https://reactjs.org/docs/getting-started.html) and [Node JS 18](https://nodejs.org/en/docs/)
-2. Latest features of JavaScript i.e. ES6, ES7, ES8 is used
-3. [React JS Hooks](https://reactjs.org/docs/hooks-intro.html) are used with Functional components
-4. ES8 `async/await` is used
+1. Code is rewritten with latest version of [React JS](https://reactjs.org/docs/getting-started.html) and [Node JS](https://nodejs.org/en/docs/).
+2. Latest features of JavaScript i.e. ESNext is used.
 
 <br/>
 
-<ol start=5>
+<ol start=3>
  <li> This is Simple Book Search Application. It is a <b>CRUD</b> application. </li>
- <li> It is a Full Stack Application. This repo contains only the <i>Frontend</i> part. For the <b>Backend</b> please check the <a href="https://github.com/anijitsahu/simple-apollo-server-graphql-lambda">simple-apollo-server-graphql-lambda</a></li>
+ <li> It is a Full Stack Application. For the <b>Backend with AWS Lambda</b> please check the <a href="https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda">aws-lambda branch</a>.</li>
 </ol>
 
-7. All the book details, authors and publication detils are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This is a _free/ shared_ account on [Atlas](https://www.mongodb.com/cloud/atlas). **So Please use it wisely**
+5. All the book details, authors and publication detils are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This is a _free/ shared_ account on [Atlas](https://www.mongodb.com/cloud/atlas). **So Please use it wisely**.
 
-<ol start=8>
+<ol start=6>
  <li>Login feature is added </li>
  <li>Error will be shown if the credentials are not correct or Network is <i>not</i> present</li>
  <li> <b>Session tracking</b> is supported using <a href="https://https://jwt.io/">JSON Web Tokens (JWT)</a>
@@ -38,37 +36,12 @@ This is a _responsive web application_ for viewing in both Mobile and Desktop.
  <li> To implement the features of <a href="https://graphql.org/">GraphQL</a> like <b>Queries, Mutations</b> the framework <a href="https://www.apollographql.com/docs/react/">Apollo Client</a> is used</li>
 </ol>
 
-13. _for simplicity passwords are not encrypted_
+11. _for simplicity passwords are not encrypted_
 
-## Features
-
-1. [AWS Lambda](https://aws.amazon.com/lambda/) function using [NodeJS](https://nodejs.org/en/docs/)
-2. Function is using latest version of [AWS SDK JavaScript v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) with all **ES6+** syntaxes like Promises, `async/await`
-
-<ol start="3">
-  <li>
-     Function are deployed using <a href="https://www.serverless.com/framework/docs/providers/aws/guide/intro">Serverless</a> Framework.
-  </li>  
-  <li>
-    <code>serverless.json</code> is used for deployment configuration instead of <code>serverless.yml</code>.
-  </li>  
-  <li>
-    All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> to store the <code>.zip</code> of the function code and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
-  </li>  
-</ol>
-
-6. For **session tracking** [JWT](https://jwt.io/) is used.
-7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
-
-<ol start="8">
-  <li> All data is saved in <a href="https://www.mongodb.com/docs/atlas/">MongoDB Atlas</a> i.e. <i>persistent</i>
-  <!--- <li> <strong>Caching</strong> is used for faster response in the APIs. <a href="https://redis.io/">Redis</a> is used for that purpose</li> -->
-  <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
+<ol start="12">
   <li> To use <a href="https://graphql.org/">GraphQL</a> features <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used
   <li> For the <i>Schema</i> generation <b>Type Definitions</b> are added. <b>Queries</b> are used for the <i>Reading</i> operations while <b>Mutations</b> are added for <i>Mutable</i> operations.
 </ol>
-
-12. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
 
 ## Installation
 
