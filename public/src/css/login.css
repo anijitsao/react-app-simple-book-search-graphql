@@ -1,0 +1,25 @@
+.login-div {
+  border: var(--basic-border);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  width: 80vw;
+  box-shadow: var(--basic-shadow);
+
+  margin: auto;
+  text-align: center;
+}
+
+.login-input {
+  width: 100%;
+}
+
+.login-button {
+  background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .login-div {
+    width: 50vw;
+  }
+}
