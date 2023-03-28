@@ -1,108 +1,113 @@
-# simple-apollo-server-graphql-lambda
-Simple [GraphQL](https://graphql.org/) APIs implementation using [Node JS](https://nodejs.org/en/docs/) and [AWS Lambda](https://aws.amazon.com/lambda/) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB Atlas](https://www.mongodb.com/docs/atlas/). 
+# react-app-simple-book-search-graphql
 
-This example illustrates how to deploy [GraphQL](https://graphql.org/) APIs using [NodeJS](https://nodejs.org/en/docs/) functions running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed functions work with [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
+A Simple Book Search Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). To connect with the Backend [GraphQL](https://graphql.org/) is used with the framework [Apollo Client](https://www.apollographql.com/docs/react/) where the [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used to implement GraphQL Server.
 
-To work with [GraphQL](https://graphql.org/) features, i.e. **Type Definitions, Mutations, Queries, Resolvers** the framework [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used.
+This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/).
 
-This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) events i.e. `httpApi`. All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*.
- 
-For *session tracking* [JSON Web Token (JWT)](https://jwt.io/) is used. 
+ES6 `module` along with [JSX Components](https://reactjs.org/docs/jsx-in-depth.html) is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code. For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used.
 
-To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user. You **must** have a [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) account.
+This is a _responsive web application_ for viewing in both Mobile and Desktop.
 
-**This application is closely related to [simple-book-search-react](https://github.com/anijitsahu/simple-book-search-react). For Frontend deployment please check the repo [simple-book-search-react](https://github.com/anijitsahu/simple-book-search-react)**
+Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB](https://docs.mongodb.com/). [Atlas](https://www.mongodb.com/cloud/atlas), the _Cloud_ version of [MongoDB](https://docs.mongodb.com/) is used.
 
+**This Application uses standalone GraphQL Server. For Backend Deployment with AWS Lambda details please check [aws-lambda branch](https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda).**
 
 ## Features
-1. [AWS Lambda](https://aws.amazon.com/lambda/) function using [NodeJS](https://nodejs.org/en/docs/)
-2. Function is using latest version of [AWS SDK JavaScript v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) with all **ES6+**  syntaxes like Promises, `async/await`
 
-<ol start="3">
-  <li>
-     Function are deployed using <a href="https://www.serverless.com/framework/docs/providers/aws/guide/intro">Serverless</a> Framework.
-  </li>  
-  <li>
-    <code>serverless.json</code> is used for deployment configuration instead of <code>serverless.yml</code>.
-  </li>  
-  <li>
-    All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> to store the <code>.zip</code> of the function code and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
-  </li>  
-</ol>  
+1. Code is rewritten with latest version of [React JS](https://reactjs.org/docs/getting-started.html) and [Node JS](https://nodejs.org/en/docs/).
+2. Latest features of JavaScript i.e. ESNext is used.
 
+<br/>
 
-6. For **session tracking** [JWT](https://jwt.io/) is used.
-7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
+<ol start=3>
+ <li> This is Simple Book Search Application. It is a <b>CRUD</b> application. </li>
+ <li> It is a Full Stack Application with <b>Standalone GraphQL Server</b>. For the <b>Backend with AWS Lambda</b> please check the <a href="https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda">aws-lambda branch</a>.</li>
+</ol>
 
-<ol start="8">
-  <li> All data is saved in <a href="https://www.mongodb.com/docs/atlas/">MongoDB Atlas</a> i.e. <i>persistent</i>
-  <!--- <li> <strong>Caching</strong> is used for faster response in the APIs. <a href="https://redis.io/">Redis</a> is used for that purpose</li> -->
-  <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
-  <li> To use <a href="https://graphql.org/">GraphQL</a> features <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used
+5. All the book details, authors and publication detils are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This is a _free/ shared_ account on [Atlas](https://www.mongodb.com/cloud/atlas). **So Please use it wisely**.
+
+<ol start=6>
+ <li>Login feature is added. </li>
+ <li>Error will be shown if the credentials are not correct or Network is <i>not</i> present.</li>
+ <li> <b>Session tracking</b> is supported using <a href="https://https://jwt.io/">JSON Web Tokens (JWT).</a>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a> is used to save the <a href="https://https://jwt.io/">JSON Web Tokens (JWT)</a>.</li>
+ <li> To implement the features of <a href="https://graphql.org/">GraphQL</a> like <b>Queries, Mutations</b> the framework <a href="https://www.apollographql.com/docs/react/">Apollo Client</a> is used in <i>Client</i> side. </li>
+</ol>
+
+11. _for simplicity passwords are not encrypted_
+
+<ol start="12">
+  <li> To use <a href="https://graphql.org/">GraphQL</a> features in <b>Server side</b> <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used
   <li> For the <i>Schema</i> generation <b>Type Definitions</b> are added. <b>Queries</b> are used for the <i>Reading</i> operations while <b>Mutations</b> are added for <i>Mutable</i> operations.
-</ol>  
+</ol>
 
+## Installation
 
-
-12. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
-
-
-## Usage
-
-First clone the repo
+Clone the repository:
 
 ```bash
-$ git clone https://github.com/anijitsao/simple-apollo-server-graphql.git
+$ git clone https://github.com/anijitsao/react-app-simple-book-search-graphql.git
 ```
-Install all the necessary dependencies by going inside the directory
+
+Navigate inside the directory:
 
 ```bash
-# Navigating inside the directory
-$ cd simple-apollo-server-graphql
+$ cd react-app-simple-book-search-graphql
+```
 
-# To install all the necessary dependencies
+Install all the necessary dependecies and run the **client side** of the application
+
+```bash
 $ npm install
+
+# To serve the application we use a npm module named http-server
+$ npm run client-start
 ```
 
+Now open **Another Terminal** and navigate to the same directory and run the **GraphQL Server**
 
-### Deployment
+```bash
+$ cd /path/to/react-app-simple-book-search-graphql
 
-In order to deploy the example, you need to run the following command:
-
+# Run the GraphQL Server
+$ npm run server-start
 ```
-$ serverless deploy
-```
 
-### Invocation
+### Login to book search
 
-After successful deployment, you can invoke the deployed **functions / resolvers**. 
+---
 
-However, to call using [GraphQL](https://graphql.org/) API you can use any *supported* Client like [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
+1. Open web browser and type`http://localhost:8080` in the address bar to load the application
+2. Now login with username `admin` and password `admin123`
+
+**Test users**
+
+| Username | Password |
+| -------- | -------- |
+| admin    | admin123 |
+
+_tested with latest versions of <img src="screenshots/chrome.png" width="20px" title="Google Chrome">[Google Chrome](https://www.google.com/chrome/) and <img src="screenshots/firefox.png" width="25px" title="Firefox">[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)_
+
+However, to _test_ [GraphQL](https://graphql.org/) API you can use any _supported_ Client like [Apollo Sandbox](https://studio.apollographql.com/sandbox/explorer/?_gl=1%2Abuieem%2A_ga%2AMjAyNTg2NTkxOC4xNjc5OTg3MzI4%2A_ga_0BGG5V2W2K%2AMTY3OTk4NzMyOC4xLjEuMTY3OTk4NzM0NS4wLjAuMA..) with the `url` and _HTTP Verbs_ as shown in Terminal.
 
 ## API Listing
 
 API listing is given below, -
 
-**POST** /url-of-the-deployed-lambda/graphql
+All APIs have common endpoint as following.
 
-Following username and password is valid
+**POST** /url-of-the-deployed-service/graphql (for `localhost` it will be `http://localhost:4000/graphql`)
 
-|Username | Password |
-|---|---|
-|admin | admin123 |
+Following _Queries_ use the same URL mentioned above
 
 ```javascript
 query CreateTokenQuery{
   // these are the only possible username and password
-  createToken(username: "admin", password: "admin123") { 
+  createToken(username: "admin", password: "admin123") {
     token
   }
 }
 ```
-
-**GET** /url-of-the-deployed-lambda/graphql
-
-Following *Queries* use the same URL mentioned above
 
 ```javascript
 query HelloQuery {
@@ -130,9 +135,7 @@ query FindAllAuthors{
 }
 ```
 
-**POST** /url-of-the-deployed-lambda/graphql
-
-Following *Mutations* have the same URL mentioned above
+Following _Mutations_ have the same URL mentioned above
 
 ```javascript
 mutation ModifyCount {
@@ -163,15 +166,13 @@ mutation UpdateBookMutation($updateId: ID!, $bookData: UpdataBookParams!) {
 // variables
 {
   "updateId": "id-of-the-book-to-update",
-  "bookData": { 
+  "bookData": {
    "name": "You Don't Know ES6"
   }
 }
 ```
 
-**POST** /url-of-the-deployed-lambda/graphql
-
-Following **Author** related *Mutations* have the same URL mentioned above
+Following **Author** related _Mutations_ have the same URL mentioned above
 
 ```javascript
 mutation AddAuthorMutation {
@@ -199,10 +200,46 @@ mutation UpdateAuthorMutation(
 // variables
 {
   "updateId": "id-of-the-author-to-update",
-  "authorData": { 
+  "authorData": {
    "firstName": "Agatha",
    "lastName": "Christie",
    "country": "United Kingdom"
   }
 }
 ```
+
+## Screenshots
+
+Some screens of the application is given below for better understanding.
+
+Desktop as well as Mobile version of the screenshots are given side by side.
+
+<p> Login Screen <br/> 
+ <img src="screenshots/desktop 1.png" width="590px" title="Login screen"/>
+ <img src="screenshots/mobile 1.png" width="190px" title="Login screen"/> 
+</p>
+ 
+ <p> If credentials are not correct <br/> 
+ <img src="screenshots/desktop 2.png" width="590px" title="Entering credentials screen"/>
+ <img src="screenshots/mobile 2.png" width="190px" title="Entering credentials screen"/> 
+</p>
+
+<p> After submitting credentials and Search a book <br/> 
+ <img src="screenshots/desktop 3.png" width="590px" title="After submitting credentials screen"/>
+ <img src="screenshots/mobile 3.png" width="190px" title="After submitting credentials screen"/> 
+</p>
+
+<p> Add a Book <br/> 
+ <img src="screenshots/desktop 4.png" width="590px" title="If credentials are not correct screen"/>
+ <img src="screenshots/mobile 4.png" width="190px" title="If credentials are not correct screen"/> 
+</p>
+
+<p> Edit a Book <br/> 
+ <img src="screenshots/desktop 5.png" width="590px" title="After a successful login screen"/>
+ <img src="screenshots/mobile 5.png" width="190px" title="After a successful login screen"/> 
+</p>
+
+<p> Delete a Book <br/> 
+ <img src="screenshots/desktop 6.png" width="590px" title="When a new user joins screen"/>
+ <img src="screenshots/mobile 6.png" width="190px" title="When a new user joins screen"/> 
+</p>

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-small: 10px;
+  --font-regular: 16px;
+  --font-family: "Roboto", sans-serif;
+
+  --font-big: 1.1rem;
+
+  --primary-color: #520877;
+  --error-color: #cc0000;
+  --error-background-color: #fbd6d6;
+
+  --success-color: #025302;
+  --success-background-color: #b1d9b1;
+  --badge-color: #eee;
+  --fill-in-color: #eee;
+  --icon-color: #ccc;
+
+  --basic-border: solid 1px #eee;
+  --thick-border: solid 5px var(--primary-color);
+
+  --basic-shadow: 5px 5px 10px #eee;
+  --dark-shadow: 0 0 15px #ccc;
+
+  --purple-border: solid 2px var(--primary-color);
+  --purple-border-thick: solid 3px var(--primary-color);
+}
+
+/* tags related */
+body {
+  font-size: var(--font-regular);
+  font-family: var(--font-family);
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+}
+
+header {
+  height: 10vh;
+  height: 10vh;
+  color: #fff;
+  font-size: 1.3rem;
+  display: grid;
+  align-items: center;
+}
+
+footer {
+  height: 3vh;
+}
+
+main {
+  height: calc(100vh - 13vh);
+  position: relative;
+}
+
+input {
+  outline: none;
+  border-bottom: var(--purple-border);
+}
+
+input:hover,
+input:focus {
+  cursor: pointer;
+}
+
+input:focus {
+  border-bottom: var(--purple-border-thick);
+}
+
+button {
+  padding: 0.7rem 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: var(--font-big);
+
+  margin-top: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.padding-1rem {
+  padding: 1rem;
+}
+
+.title-text {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 100;
+  padding-bottom: 1rem;
+}
+
+.title-text-bordered {
+  border-bottom: var(--basic-border);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.icon {
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--icon-color);
+  font-size: 0.8rem;
+}
+
+.icon:hover {
+  color: var(--primary-color);
+}
+
+.close-icon {
+  position: inherit;
+  right: 0.9rem;
+  top: 0.4rem;
+  font-size: 1rem !important;
+}
+
+.delete-icon:hover {
+  color: var(--error-color);
+}

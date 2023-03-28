@@ -1,22 +1,37 @@
 {
-  "name": "simple-apollo-server-graphql-lambda",
-  "version": "1.0.0",
+  "name": "react-app-simple-book-search-graphql",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server-start": "node -r dotenv/config server/services/graphqlService.js dotenv_config_path=server/.env",
+    "client-build": "node_modules/.bin/webpack --mode production --config ./public/webpack.config.js",
+    "client-dev": "node_modules/.bin/webpack --mode development --config ./public/webpack.config.js",
+    "client-start": "node_modules/.bin/http-server ./public/dist -c-1"
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-lambda": "^3.10.0",
-    "graphql": "^16.5.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.8.0"
+    "@apollo/client": "^3.7.10",
+    "@apollo/server": "^4.5.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "serverless-dotenv-plugin": "^4.0.1"
+    "http-server": "^14.1.1",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
   }
 }
