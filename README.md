@@ -269,17 +269,3 @@ Desktop as well as Mobile version of the screenshots are given side by side.
  <img src="screenshots/desktop 6.png" width="590px" title="When a new user joins screen"/>
  <img src="screenshots/mobile 6.png" width="190px" title="When a new user joins screen"/> 
 </p>
-
-Simple [GraphQL](https://graphql.org/) APIs implementation using [Node JS](https://nodejs.org/en/docs/) and [AWS Lambda](https://aws.amazon.com/lambda/) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
-
-This example illustrates how to deploy [GraphQL](https://graphql.org/) APIs using [NodeJS](https://nodejs.org/en/docs/) functions running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed functions work with [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
-
-To work with [GraphQL](https://graphql.org/) features, i.e. **Type Definitions, Mutations, Queries, Resolvers** the framework [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used.
-
-This Example works with [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) events i.e. `httpApi`. All _logs_ for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e _persistent_.
-
-For _session tracking_ [JSON Web Token (JWT)](https://jwt.io/) is used.
-
-To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user. You **must** have a [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) account.
-
-**This application is closely related to [simple-book-search-react](https://github.com/anijitsahu/simple-book-search-react). For Frontend deployment please check the repo [simple-book-search-react](https://github.com/anijitsahu/simple-book-search-react)**
