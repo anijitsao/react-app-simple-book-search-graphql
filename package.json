@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server-start": "node -r dotenv/config server/services/graphqlService.js dotenv_config_path=server/.env"
+    "server-start": "node -r dotenv/config server/services/graphqlService.js dotenv_config_path=server/.env",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "serve": "node_modules/.bin/http-server ./dist -c-1"
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
