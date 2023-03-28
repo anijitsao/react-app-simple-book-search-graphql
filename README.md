@@ -55,13 +55,22 @@ Navigate inside the directory:
 $ cd react-app-simple-book-search-graphql
 ```
 
-Install all the necessary dependecies and run the application
+Install all the necessary dependecies and run the **client side** of the application
 
 ```bash
 $ npm install
 
 # To serve the application we use a npm module named http-server
-$ npm run serve
+$ npm run client-start
+```
+
+Now open **Another Terminal** and navigate to the same directory and run the **GraphQL Server**
+
+```bash
+$ cd /path/to/react-app-simple-book-search-graphql
+
+# Run the GraphQL Server
+$ npm run server-start
 ```
 
 ### Login to book search
@@ -77,52 +86,19 @@ $ npm run serve
 | -------- | -------- |
 | admin    | admin123 |
 
-_tested with latest versions of <img src="screenshots/chrome.png" width="20px" title="Google Chrome">[Google Chrome](https://www.google.com/chrome/) and <img src="screenshots/firefox.png" width="25px" title="Firefox Developer edition">[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)_
+_tested with latest versions of <img src="screenshots/chrome.png" width="20px" title="Google Chrome">[Google Chrome](https://www.google.com/chrome/) and <img src="screenshots/firefox.png" width="25px" title="Firefox">[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)_
 
-## Usage
-
-First clone the repo
-
-```bash
-$ git clone https://github.com/anijitsao/simple-apollo-server-graphql.git
-```
-
-Install all the necessary dependencies by going inside the directory
-
-```bash
-# Navigating inside the directory
-$ cd simple-apollo-server-graphql
-
-# To install all the necessary dependencies
-$ npm install
-```
-
-### Deployment
-
-In order to deploy the example, you need to run the following command:
-
-```
-$ serverless deploy
-```
-
-### Invocation
-
-After successful deployment, you can invoke the deployed **functions / resolvers**.
-
-However, to call using [GraphQL](https://graphql.org/) API you can use any _supported_ Client like [Apollo Sandbox](https://studio.apollographql.com/sandbox/explorer/?_gl=1%2Abuieem%2A_ga%2AMjAyNTg2NTkxOC4xNjc5OTg3MzI4%2A_ga_0BGG5V2W2K%2AMTY3OTk4NzMyOC4xLjEuMTY3OTk4NzM0NS4wLjAuMA..) with the `url` and _HTTP Verbs_ as shown in Terminal.
+However, to _test_ [GraphQL](https://graphql.org/) API you can use any _supported_ Client like [Apollo Sandbox](https://studio.apollographql.com/sandbox/explorer/?_gl=1%2Abuieem%2A_ga%2AMjAyNTg2NTkxOC4xNjc5OTg3MzI4%2A_ga_0BGG5V2W2K%2AMTY3OTk4NzMyOC4xLjEuMTY3OTk4NzM0NS4wLjAuMA..) with the `url` and _HTTP Verbs_ as shown in Terminal.
 
 ## API Listing
 
 API listing is given below, -
 
 All APIs have common endpoint as following.
-**POST** /url-of-the-deployed-lambda/graphql (for `localhost` it will be `http://localhost:4000/graphql`)
 
-Following username and password is valid
+**POST** /url-of-the-deployed-service/graphql (for `localhost` it will be `http://localhost:4000/graphql`)
 
-| Username | Password |
-| -------- | -------- |
-| admin    | admin123 |
+Following _Queries_ use the same URL mentioned above
 
 ```javascript
 query CreateTokenQuery{
@@ -132,8 +108,6 @@ query CreateTokenQuery{
   }
 }
 ```
-
-Following _Queries_ use the same URL mentioned above
 
 ```javascript
 query HelloQuery {

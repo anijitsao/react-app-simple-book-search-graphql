@@ -1,6 +1,6 @@
 {
-  "name": "react-simple-apollo-server-graphql",
-  "version": "1.0.0",
+  "name": "react-app-simple-book-search-graphql",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
