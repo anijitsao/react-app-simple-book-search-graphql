@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server-start": "node -r dotenv/config server/services/graphqlService.js dotenv_config_path=server/.env",
-    "client-build": "webpack --mode production",
-    "client-dev": "webpack --mode development",
+    "client-build": "node_modules/.bin/webpack --mode production --config ./public/webpack.config.js",
+    "client-dev": "node_modules/.bin/webpack --mode development --config ./public/webpack.config.js",
     "client-start": "node_modules/.bin/http-server ./public/dist -c-1"
   },
   "keywords": [],
