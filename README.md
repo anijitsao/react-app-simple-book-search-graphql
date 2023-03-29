@@ -1,4 +1,4 @@
-# simple-apollo-server-graphql
+# react-app-simple-book-search-graphql (aws-lambda branch)
 Simple [GraphQL](https://graphql.org/) APIs implementation using [Node JS](https://nodejs.org/en/docs/) and [AWS Lambda](https://aws.amazon.com/lambda/) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB Atlas](https://www.mongodb.com/docs/atlas/). 
 
 This example illustrates how to deploy [GraphQL](https://graphql.org/) APIs using [NodeJS](https://nodejs.org/en/docs/) functions running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed functions work with [MongoDB Atlas](https://www.mongodb.com/docs/atlas/).
@@ -52,13 +52,16 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 First clone the repo
 
 ```bash
-$ git clone https://github.com/anijitsao/simple-apollo-server-graphql.git
+$ git clone https://github.com/anijitsao/react-app-simple-book-search-graphql.git
 ```
 Install all the necessary dependencies by going inside the directory
 
 ```bash
 # Navigating inside the directory
 $ cd simple-apollo-server-graphql
+
+# Checkout to lambda branch
+$ git checkout aws-lambda
 
 # To install all the necessary dependencies
 $ npm install
