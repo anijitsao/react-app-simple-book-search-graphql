@@ -15,7 +15,7 @@ Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo
 ## Features
 
 1. Code is rewritten with latest version of [React JS](https://react.dev/learn) and [Node JS](https://nodejs.org/en/docs/).
-2. Latest features of JavaScript i.e. ESNext is used.
+2. Latest features of JavaScript i.e. **ESNext** is used.
 
 <br/>
 
