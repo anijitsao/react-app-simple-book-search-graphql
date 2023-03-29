@@ -1,20 +1,20 @@
 # react-app-simple-book-search-graphql
 
-A Simple Book Search Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). To connect with the Backend [GraphQL](https://graphql.org/) is used with the framework [Apollo Client](https://www.apollographql.com/docs/react/) where the [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used to implement GraphQL Server.
+A Simple Book Search Application using [React JS](https://react.dev/learn), a JavaScript library to make awesome UI by Facebook, [Node JS](https://nodejs.org/en/docs) with [AWS Lambda](https://aws.amazon.com/lambda/) and [MongoDB](https://docs.mongodb.com/). To connect with the Backend [GraphQL](https://graphql.org/) Server [Apollo Client](https://www.apollographql.com/docs/react/) is used while [Apollo Server](https://www.apollographql.com/docs/apollo-server/) is used to implement the Server.
 
-This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/).
+This application uses **component oriented UI** creation paradigm. All components are written in [JSX](https://react.dev/learn/writing-markup-with-jsx) and ES6 style and are combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/).
 
-ES6 `module` along with [JSX Components](https://reactjs.org/docs/jsx-in-depth.html) is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code. For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used.
+[Babel](https://babeljs.io/docs/en/babel-preset-react) is used to _transpile_ all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript. For UI creation [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/) are used.
 
 This is a _responsive web application_ for viewing in both Mobile and Desktop.
 
-Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB](https://docs.mongodb.com/). [Atlas](https://www.mongodb.com/cloud/atlas), the _Cloud_ version of [MongoDB](https://docs.mongodb.com/) is used.
+Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
 **This Application uses standalone GraphQL Server. For Backend Deployment with AWS Lambda details please check [aws-lambda branch](https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda).**
 
 ## Features
 
-1. Code is rewritten with latest version of [React JS](https://reactjs.org/docs/getting-started.html) and [Node JS](https://nodejs.org/en/docs/).
+1. Code is rewritten with latest version of [React JS](https://react.dev/learn) and [Node JS](https://nodejs.org/en/docs/).
 2. Latest features of JavaScript i.e. ESNext is used.
 
 <br/>
@@ -24,20 +24,20 @@ Back end is implemented using [Node JS](https://nodejs.org/en/docs) with [Apollo
  <li> It is a Full Stack Application with <b>Standalone GraphQL Server</b>. For the <b>Backend with AWS Lambda</b> please check the <a href="https://github.com/anijitsao/simple-apollo-server-graphql/tree/aws-lambda">aws-lambda branch</a>.</li>
 </ol>
 
-5. All the book details, authors and publication detils are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This is a _free/ shared_ account on [Atlas](https://www.mongodb.com/cloud/atlas). **So Please use it wisely**.
+5. All the book details, authors and publication detils are stored in the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas). This example uses a _free/ shared_ account. **So Please use it wisely**.
 
 <ol start=6>
  <li>Login feature is added. </li>
  <li>Error will be shown if the credentials are not correct or Network is <i>not</i> present.</li>
  <li> <b>Session tracking</b> is supported using <a href="https://https://jwt.io/">JSON Web Tokens (JWT).</a>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a> is used to save the <a href="https://https://jwt.io/">JSON Web Tokens (JWT)</a>.</li>
- <li> To implement the features of <a href="https://graphql.org/">GraphQL</a> like <b>Queries, Mutations</b> the framework <a href="https://www.apollographql.com/docs/react/">Apollo Client</a> is used in <i>Client</i> side. </li>
+ These tokens are saved into <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a>.</li>
+ <li> To implement the features of <a href="https://graphql.org/">GraphQL</a> like <b>Queries, Mutations</b> in <i>Client</i> side <a href="https://www.apollographql.com/docs/react/">Apollo Client</a> is used. On the otherhand, <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used to implement the same in <b>Server</b> side.</li>
 </ol>
 
-11. _for simplicity passwords are not encrypted_
+10. _for simplicity passwords are not encrypted_
 
-<ol start="12">
-  <li> To use <a href="https://graphql.org/">GraphQL</a> features in <b>Server side</b> <a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a> is used
+<ol start="11">
+  
   <li> For the <i>Schema</i> generation <b>Type Definitions</b> are added. <b>Queries</b> are used for the <i>Reading</i> operations while <b>Mutations</b> are added for <i>Mutable</i> operations.
 </ol>
 
@@ -77,8 +77,8 @@ $ npm run server-start
 
 ---
 
-1. Open web browser and type`http://localhost:8080` in the address bar to load the application
-2. Now login with username `admin` and password `admin123`
+1. Open web browser and type`http://localhost:8080` in the address bar to load the application.
+2. Now login with **Test users**.
 
 **Test users**
 
